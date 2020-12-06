@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transactions
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Symbol</th>
+      <th scope="col" class="numeric">Shares</th>
+      <th scope="col" class="numeric">Price</th>
+      <th scope="col" class="numeric">Transacted</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in rows %}
+    <tr>
+      <td>
+          {{ row["symbol"] }}
+      </td>
+      <td class="numeric">
+          {{ row["shares"] }}
+      </td>
+      <td class="numeric">
+          {{ row["price"] }}
+      </td>
+      <td class="numeric">
+          {{ row["transacted"] }}
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

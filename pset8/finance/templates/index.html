@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Symbol</th>
+      <th scope="col">Name</th>
+      <th scope="col" class="numeric">Shares</th>
+      <th scope="col" class="numeric">Price</th>
+      <th scope="col" class="numeric">TOTAL</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in rows1 %}
+    <tr>
+      <td>
+          {{ row["symbol"] }}
+      </td>
+      <td>
+          {{ row["name"] }}
+      </td>
+      <td class="numeric">
+          {{ row["quantity"] }}
+      </td>
+      <td class="numeric">
+          {{ row["price"] }}
+      </td>
+      <td class="numeric">
+          {{ row["TOTAL"] }}
+      </td>
+    </tr>
+  {% endfor %}
+    <tr>
+      <td>
+          CASH
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td class="numeric">
+          {{ cash }}
+      </td>
+    </tr>
+    <thead>
+      <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td class="numeric">
+            <b>
+               {{ grand_total }}
+            </b>
+          </td>
+      </tr>
+    </thead>
+  </tbody>
+</table>
+{% endblock %}

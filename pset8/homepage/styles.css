@@ -1,0 +1,50 @@
+h1, h2, dl
+{
+    text-align: center;
+}
+.header
+{
+    margin-top: 35px;
+}
+
+.subheader
+{
+    margin-top: 50px;
+}
+
+dl
+{
+    padding-top: 10px;
+}
+
+.padding
+{
+    padding: 10px;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.container
+{
+    width: 96%;
+    max-width: 960px;
+    height: 96%;
+    margin: 0 auto;
+}
+
+img
+{
+    width: 100%;
+    height: auto;
+}
+
+#change_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
